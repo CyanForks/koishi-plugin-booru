@@ -22,7 +22,7 @@ class ImageService extends Service {
   private sources: ImageSource[] = []
   private languageDetect = new LanguageDetect()
 
-  constructor(ctx: Context, config: Config) {
+  constructor(protected ctx: Context, protected config: Config) {
     super(ctx, 'booru', true)
     this.config = config
   }
